@@ -1,6 +1,6 @@
 import { Metadata } from "next"
-import { Button } from "components/Button/Button"
-import { LP_GRID_ITEMS } from "lp-items"
+import { Button } from "../components/Button/Button"
+// Removed unused import
 
 export const metadata: Metadata = {
   title: "NuWorld Agency | AI-Driven Organic Growth & Marketing Automation",
@@ -42,7 +42,7 @@ export default function Web() {
               Stop Drowning in Manual Marketing Tasks. NuWorld Agency Leverages Cutting-Edge AI to Drive Sustainable, Predictable Organic Traffic and Conversions.
             </p>
             <p className="mb-8 max-w-2xl font-light text-gray-600 dark:text-gray-400 md:text-lg">
-              In today's fast-paced digital landscape, traditional marketing methods struggle to keep up. NuWorld Agency is different. We are an AI-powered marketing agency specializing in supercharging your organic growth through intelligent automation, data-driven insights, and hyper-efficient workflows. Get ready to scale faster, understand your market deeper, and achieve unparalleled ROI.
+              In today&apos;s fast-paced digital landscape, traditional marketing methods struggle to keep up. NuWorld Agency is different. We are an AI-powered marketing agency specializing in supercharging your organic growth through intelligent automation, data-driven insights, and hyper-efficient workflows. Get ready to scale faster, understand your market deeper, and achieve unparalleled ROI.
             </p>
             <Button href="/contact" className="mr-3">
               Get Your Free AI Growth Audit
@@ -149,7 +149,7 @@ export default function Web() {
                 </svg>
               </div>
               <h3 className="mb-3 text-xl font-bold text-gray-900 dark:text-white">Efficiency Gains</h3>
-              <p className="text-gray-600 dark:text-gray-400">Massive efficiency gains through marketing automation that frees up your team's time.</p>
+              <p className="text-gray-600 dark:text-gray-400">Massive efficiency gains through marketing automation that frees up your team&apos;s time.</p>
             </div>
 
             <div className="bg-white dark:bg-gray-700 rounded-lg shadow-md p-6">
@@ -221,7 +221,7 @@ export default function Web() {
                 </svg>
               </div>
               <h3 className="mb-3 text-xl font-bold text-gray-900 dark:text-white">AI Competitive Analysis</h3>
-              <p className="text-gray-600 dark:text-gray-400">Gain an unfair advantage with AI-speed analysis of your competitors' organic strategies, backlink profiles, content performance, and market positioning. Uncover actionable insights to refine your own approach.</p>
+              <p className="text-gray-600 dark:text-gray-400">Gain an unfair advantage with AI-speed analysis of your competitors&apos; organic strategies, backlink profiles, content performance, and market positioning. Uncover actionable insights to refine your own approach.</p>
             </div>
 
             <div className="bg-white dark:bg-gray-700 rounded-lg shadow-md p-6">
@@ -287,7 +287,7 @@ export default function Web() {
                 </svg>
               </div>
               <h3 className="mb-3 text-xl font-bold text-gray-900 dark:text-white">Exponential Efficiency</h3>
-              <p className="text-gray-600 dark:text-gray-400">Achieve more in less time with intelligent automation that multiplies your team's productivity.</p>
+              <p className="text-gray-600 dark:text-gray-400">Achieve more in less time with intelligent automation that multiplies your team&apos;s productivity.</p>
             </div>
 
             <div className="bg-white dark:bg-gray-700 rounded-lg shadow-md p-6">
@@ -400,7 +400,7 @@ export default function Web() {
             Get in Touch
           </h2>
           <p className="mb-8 text-lg text-gray-600 dark:text-gray-400">
-            Let's discuss how AI-driven organic growth can revolutionize your marketing.
+            Let&apos;s discuss how AI-driven organic growth can revolutionize your marketing.
           </p>
           <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-x-8 sm:space-y-0">
             <div>
