@@ -76,3 +76,23 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ### Environment Variables
 Environment variables are managed through T3 Env in `env.mjs`. Currently configured:
 - `ANALYZE` - Boolean flag for bundle analysis (server-side)
+- `EMAIL_HOST` - SMTP server host (smtp0001.neo.space)
+- `EMAIL_PORT` - SMTP server port (587)
+- `EMAIL_SECURE` - Boolean for secure connection (true)
+- `EMAIL_USER` - SMTP authentication user (michael@nuworld.cloud)
+- `EMAIL_PASSWORD` - SMTP authentication password
+- `N8N_WEBHOOK_URL` - N8N webhook endpoint for form submissions
+- `NODE_ENV` - Environment (development/production/test)
+
+### Contact Form & Email Integration
+- Contact form at `/contact` with TypeScript implementation
+- API route `/api/contact` handles form submissions
+- Dual delivery: email via nodemailer + webhook to N8N automation
+- Form includes: name, email, company, phone, message fields
+- Proper validation and user feedback
+
+### Analytics
+- Vercel Analytics installed and configured in root layout
+- Tracks page views, referrers, and user demographics
+- Privacy-friendly (no cookies, anonymized data)
+- View analytics in Vercel dashboard after deployment

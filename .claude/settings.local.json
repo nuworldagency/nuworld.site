@@ -1,5 +1,15 @@
 {
   "permissions": {
+    "allow": [
+      "Bash(rm:*)",
+      "Bash(yarn add:*)",
+      "Bash(npm install:*)",
+      "Bash(yarn build)",
+      "WebFetch(domain:vercel.com)",
+      "Bash(yarn install)",
+      "Bash(yarn install:*)",
+      "Bash(git add:*)"
+    ],
     "defaultMode": "acceptEdits"
   }
 }
