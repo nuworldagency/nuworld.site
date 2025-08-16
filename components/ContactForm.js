@@ -26,7 +26,22 @@ to: 'michael@nuworld.cloud',
         text: message,
       };
 
-      await transporter.sendMail(mailOptions);
+await transporter.sendMail(mailOptions).then((info) => {
+  console.log('Email sent: ' + info.response);
+}).catch((error) => {
+  console.log('Error sending email: ' + error);
+});
+fetch('https://n8n.nuworld.cloud/webhook-test/5f0a6579-de03-4c45-a98d-7d1c48ec7b6b', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    name: name,
+    email: email,
+    message: message
+  })
+});
       setSent(true);
     } catch (error) {
       console.error(error);
