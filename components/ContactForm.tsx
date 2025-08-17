@@ -35,6 +35,8 @@ const ContactForm = () => {
     setIsSubmitting(true)
     setError("")
 
+    console.log("Form submission started with data:", formData)
+
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
@@ -44,10 +46,16 @@ const ContactForm = () => {
         body: JSON.stringify(formData),
       })
 
+      console.log("API response status:", response.status)
+
       if (!response.ok) {
         const errorData = await response.json() as { error?: string }
-        throw new Error(errorData.error || "Failed to submit form")
+        console.error("API error response:", errorData)
+        throw new Error(errorData.error || `HTTP ${response.status}: Failed to submit form`)
       }
+
+      const successData = await response.json()
+      console.log("Form submitted successfully:", successData)
 
       setSubmitted(true)
       setFormData({
