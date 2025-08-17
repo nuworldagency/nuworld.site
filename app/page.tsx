@@ -1,6 +1,6 @@
 import { Metadata } from "next"
 import { Button } from "../components/Button/Button"
-// Removed unused import
+import ContactForm from "../components/ContactForm"
 
 export const metadata: Metadata = {
   title: "NuWorld Agency | AI-Driven Organic Growth & Marketing Automation",
@@ -12,14 +12,14 @@ export const metadata: Metadata = {
     description: "Unlock exponential organic growth with NuWorld Agency. We use cutting-edge AI for marketing automation, SEO, content creation, and competitive analysis. Get your free AI growth audit!"
   },
   openGraph: {
-    url: "https://nuworld.site/",
+    url: "https://nuworldagency.com/",
     title: "NuWorld Agency | AI-Driven Organic Growth & Marketing Automation",
     description: "Unlock exponential organic growth with NuWorld Agency. We use cutting-edge AI for marketing automation, SEO, content creation, and competitive analysis. Get your free AI growth audit!",
     images: [
       {
         width: 1200,
         height: 630,
-        url: "https://nuworld.site/images/nuworld-og-image.png",
+        url: "https://nuworldagency.com/images/nuworld-og-image.png",
         alt: "NuWorld Agency - AI-Driven Organic Growth"
       },
     ],
@@ -393,28 +393,62 @@ export default function Web() {
         </div>
       </section>
 
-      {/* Contact Section */}
+      {/* Contact Form Section */}
       <section className="bg-gray-50 dark:bg-gray-800 py-12 lg:py-16">
-        <div className="mx-auto max-w-screen-xl px-4 text-center">
-          <h2 className="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white md:text-4xl">
-            Get in Touch
-          </h2>
-          <p className="mb-8 text-lg text-gray-600 dark:text-gray-400">
-            Let&apos;s discuss how AI-driven organic growth can revolutionize your marketing.
-          </p>
-          <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-x-8 sm:space-y-0">
-            <div>
-              <h3 className="text-lg font-bold mb-2">Email</h3>
-              <p className="text-gray-600 dark:text-gray-400">hello@nuworld.site</p>
+        <div className="mx-auto max-w-screen-xl px-4">
+          <div className="mx-auto max-w-3xl text-center mb-12">
+            <h2 className="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white md:text-4xl">
+              Get Your Free AI Growth Audit
+            </h2>
+            <p className="mb-8 text-lg text-gray-600 dark:text-gray-400">
+              Ready to unlock exponential organic growth with AI? Let&apos;s discuss how our AI-powered solutions can revolutionize your marketing.
+            </p>
+          </div>
+          
+          <div className="mx-auto max-w-2xl">
+            <div className="rounded-lg bg-white p-6 shadow dark:bg-gray-700 md:p-8">
+              <ContactForm />
             </div>
+          </div>
+          
+          {/* Contact Information */}
+          <div className="mt-12 grid gap-8 md:grid-cols-3 text-center">
             <div>
-              <h3 className="text-lg font-bold mb-2">Phone</h3>
-              <p className="text-gray-600 dark:text-gray-400">(555) 123-4567</p>
+              <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary-100 text-primary-600 dark:bg-primary-900 dark:text-primary-400">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="h-6 w-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                </svg>
+              </div>
+              <h3 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Email Us</h3>
+              <p className="text-gray-600 dark:text-gray-400">
+                <a href="mailto:michael@nuworld.cloud" className="hover:text-primary-600 dark:hover:text-primary-400">
+                  michael@nuworld.cloud
+                </a>
+              </p>
             </div>
+
             <div>
-              <Button href="/contact" className="bg-primary-700 text-white hover:bg-primary-800">
-                Contact Form
-              </Button>
+              <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary-100 text-primary-600 dark:bg-primary-900 dark:text-primary-400">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="h-6 w-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                </svg>
+              </div>
+              <h3 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Call Us</h3>
+              <p className="text-gray-600 dark:text-gray-400">
+                <a href="tel:+15551234567" className="hover:text-primary-600 dark:hover:text-primary-400">
+                  (555) 123-4567
+                </a>
+              </p>
+            </div>
+
+            <div>
+              <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary-100 text-primary-600 dark:bg-primary-900 dark:text-primary-400">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="h-6 w-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Response Time</h3>
+              <p className="text-gray-600 dark:text-gray-400">Within 24 hours</p>
             </div>
           </div>
         </div>

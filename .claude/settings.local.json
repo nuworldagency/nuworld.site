@@ -8,7 +8,8 @@
       "WebFetch(domain:vercel.com)",
       "Bash(yarn install)",
       "Bash(yarn install:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git push:*)"
     ],
     "defaultMode": "acceptEdits"
   }
