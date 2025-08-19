@@ -85,11 +85,18 @@ Environment variables are managed through T3 Env in `env.mjs`. Currently configu
 - `NODE_ENV` - Environment (development/production/test)
 
 ### Contact Form & Email Integration
-- Contact form at `/contact` with TypeScript implementation
+- Contact form integrated directly into homepage with TypeScript implementation
 - API route `/api/contact` handles form submissions
 - Dual delivery: email via nodemailer + webhook to N8N automation
 - Form includes: name, email, company, phone, message fields
 - Proper validation and user feedback
+
+### Webhook Configuration Strategy
+- **Test Environment**: Uses `N8N_WEBHOOK_URL` with `/webhook-test/` path
+- **Production Environment**: Automatically converts to `/webhook/` path (removes "-test")
+- **Environment Variable**: Set `N8N_WEBHOOK_URL=https://n8n.nuworld.cloud/webhook-test/5f0a6579-de03-4c45-a98d-7d1c48ec7b6b`
+- **Production URL**: `https://n8n.nuworld.cloud/webhook/5f0a6579-de03-4c45-a98d-7d1c48ec7b6b`
+- **Logic**: API route checks `NODE_ENV` and automatically uses correct endpoint
 
 ### Analytics
 - Vercel Analytics installed and configured in root layout

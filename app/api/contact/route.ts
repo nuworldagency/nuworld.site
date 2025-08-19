@@ -96,9 +96,19 @@ export async function POST(request: NextRequest) {
       source: "nuworldagency.com",
     }
 
-    console.log("Sending to webhook:", env.N8N_WEBHOOK_URL)
+    // Determine webhook URL based on environment
+    // For production, remove "-test" from the webhook URL
+    const baseWebhookUrl = env.N8N_WEBHOOK_URL
+    const webhookUrl = env.NODE_ENV === "production" 
+      ? baseWebhookUrl.replace("/webhook-test/", "/webhook/")
+      : baseWebhookUrl
+
+    console.log("Environment:", env.NODE_ENV)
+    console.log("Base webhook URL:", baseWebhookUrl)
+    console.log("Using webhook URL:", webhookUrl)
+    
     try {
-      const webhookResponse = await fetch(env.N8N_WEBHOOK_URL, {
+      const webhookResponse = await fetch(webhookUrl, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
